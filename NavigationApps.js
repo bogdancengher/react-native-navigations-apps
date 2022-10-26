@@ -103,7 +103,7 @@ class NavigationApps extends Component {
                             appDeepLinkUri: 'maps://app',
                             appDeepLinkUriToUse: 'maps://app?',
                             navigateByAddress: ({addressToNavigate, travelMode}) => encodeURI(this.state.navApps.maps.appDeepLinkUriToUse + `daddr=${addressToNavigate}&dirflg=${travelMode}`),
-                            navigateByLatAndLon: ({addressToNavigate, travelMode, lat, lon}) => encodeURI(this.state.navApps.maps.appDeepLinkUriToUse + `daddr=${addressToNavigate}&dirflg=${travelMode}&ll=${llatan},${lon}`),
+                            navigateByLatAndLon: ({addressToNavigate, travelMode, lat, lon}) => encodeURI(this.state.navApps.maps.appDeepLinkUriToUse + `q=${addressToNavigate}&dirflg=${travelMode}&ll=${lat},${lon}`),
                             searchLocationByLatAndLon: ({lat, lon}) => encodeURI(this.state.navApps.maps.appDeepLinkUriToUse + `ll=${lat},${lon}`)
 
                         },
